@@ -1,12 +1,11 @@
 require 'pry'
 class Song
-    attr_accessor :name, :artist
+    attr_accessor :name, :artist 
     @@all = []
 
-    def initialize(name)
-        @name = name
+    def initialize(song_name)
+        @name = song_name
         @@all << self
-        #binding.pry
     end
 
     def self.all
@@ -14,10 +13,10 @@ class Song
     end
 
     def artist_name
-        if @artist == nil
+        if !artist
             nil
         else
-            @artist.name
+            self.artist.name
         end
     end
 end

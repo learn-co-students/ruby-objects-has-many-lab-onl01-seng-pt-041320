@@ -4,22 +4,20 @@ class Artist
 
     def initialize(name)
         @name = name
-        @songs = []
-        #binding.pry
     end
 
     def songs
         Song.all
+        #binding.pry
     end
 
     def add_song(song)
-        @songs << song
         song.artist = self
         #binding.pry
     end
 
-    def add_song_by_name(name)
-        new_song = Song.new(name)
+    def add_song_by_name(song)
+        new_song = Song.new(song)
         new_song.artist = self
         #binding.pry
     end
