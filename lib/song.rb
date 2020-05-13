@@ -5,7 +5,7 @@ class Song
 
     def initialize(name)
         @name = name
-        save
+        self.save
     end
 
     def save #saves every instantiated song into the class variable @@all
@@ -16,7 +16,7 @@ class Song
         @@all
     end
 
-#     def artist_name
-      
-#     end
+    def artist_name #knows the name of its artist
+        self.artist ? self.artist.name : nil    
+    end
 end
