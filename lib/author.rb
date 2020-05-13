@@ -2,11 +2,14 @@ require 'pry'
 
 class Author
 
-    attr_accessor :name, :author
+    attr_accessor :name, :author, :title
+
+    @@post_count = 0
 
     def initialize(name)
         @name = name
         @author = author
+        @title = title
 
     end
 
@@ -19,9 +22,10 @@ class Author
     end
 
     def add_post_by_title(post_title) #takes in an argument of a post title,  
-       post = Post.new(post_title) #creates a new post with it
+       post_title = Post.new(post_title) #creates a new post with it
        post_title.author = self #and associates the post and author
-       binding.pry
+
+    #    binding.pry
     end
 
     def self.post_count
