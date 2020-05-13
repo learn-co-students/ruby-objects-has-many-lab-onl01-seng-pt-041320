@@ -20,7 +20,7 @@ class Author
 
     def add_post_by_title(post_title) #takes in an argument of a post title,  
        post = Post.new(post_title) #creates a new post with it
-       post_title.author = @author #and associates the post and author
+       post_title.author = self #and associates the post and author
        binding.pry
     end
 
